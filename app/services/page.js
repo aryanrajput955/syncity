@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Star, MapPin, Calendar, Users, Award, Gift } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Card({ className = "", children, ...props }) {
   return (
@@ -560,12 +561,14 @@ export default function Services() {
             Let's transform your vision into an unforgettable experience. Our team is ready to craft your perfect event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+           <Link href="/contact">
             <Button variant="secondary" className="text-lg px-10 py-5">
               Schedule Consultation
             </Button>
-            <Button variant="ghost" className="text-white border-white/30 hover:border-white/60 hover:bg-white/10 text-lg px-10 py-5">
+            </Link>
+            {/* <Button variant="ghost" className="text-white border-white/30 hover:border-white/60 hover:bg-white/10 text-lg px-10 py-5">
               View Our Portfolio
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

@@ -129,7 +129,7 @@ export function WhyWeStartedSection() {
           >
             <div className="relative">
               <Image
-                src="/stressed-couple-planning-wedding-with-papers-scatt.png"
+                src="/img/4.png"
                 alt="Wedding Planning Journey"
                 width={600}
                 height={500}
@@ -194,13 +194,13 @@ export function ServicesPreviewSection() {
               features: ["Mountain venues", "Custom decor", "Photography"]
             },
             {
-              image: "/corporate-team-building-event-in-mountain-resort.png",
+              image: "/img/img2.png",
               title: "Corporate Events",
               description: "Professional gatherings with mountain charm",
               features: ["Team building", "Conferences", "Retreats"]
             },
             {
-              image: "/farm-tourism-experience-with-traditional-activitie.png",
+              image: "/peaceful-farm-stay-in-uttarakhand-with-mountain-vi.png",
               title: "Farm Tourism",
               description: "Authentic rural experiences in Devbhoomi Uttarakhand",
               features: ["Local culture", "Traditional food", "Activities"]

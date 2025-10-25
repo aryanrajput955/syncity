@@ -227,8 +227,8 @@ export default function Contact() {
                     <Phone className="h-5 w-5 text-[#D8B7C1]" /> Call Us
                   </h3>
                   <p className="text-[#897A81]/80 mb-2">We’re ready to discuss your vision!</p>
-                  <p className="text-lg font-semibold text-[#897A81]">+91 98765 43210</p>
-                  <p className="text-lg font-semibold text-[#897A81]">+91 87654 32109</p>
+                  <p className="text-lg font-semibold text-[#897A81]">+91 63977 23250</p>
+                  <p className="text-lg font-semibold text-[#897A81]">+91 84330 23265</p>
                 </CardContent>
               </Card>
 
@@ -238,8 +238,8 @@ export default function Contact() {
                     <Mail className="h-5 w-5 text-[#D8B7C1]" /> Email Us
                   </h3>
                   <p className="text-[#897A81]/80 mb-2">Drop us a line to get started!</p>
-                  <p className="text-lg font-semibold text-[#897A81]">hello@syncityevents.com</p>
-                  <p className="text-lg font-semibold text-[#897A81]">weddings@syncityevents.com</p>
+                  <p className="text-lg font-semibold text-[#897A81]">connect@syncityevents.com</p>
+              
                 </CardContent>
               </Card>
 
@@ -250,11 +250,8 @@ export default function Contact() {
                   </h3>
                   <p className="text-[#897A81]/80 mb-2">Meet us in the heart of Uttarakhand</p>
                   <p className="text-[#897A81]">
-                    123 Mountain View Road
                     <br />
-                    Dehradun, Uttarakhand 248001
-                    <br />
-                    India
+                    Haridwar, Uttarakhand
                   </p>
                 </CardContent>
               </Card>

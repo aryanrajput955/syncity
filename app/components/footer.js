@@ -1,44 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#EFE1DA] text-[#897980]">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           <div className="space-y-6">
-         
-  <div className="flex items-center space-x-3">
-             <Image src="/logo2.png" alt="Syncity Logo" width={160} height={140} className="w-40 h-35" />
+            <div className="flex items-center space-x-3">
+              <Image src="/logo2.png" alt="Syncity Logo" width={160} height={140} className="w-40 h-35" />
             </div>
             <p className="text-[#897980]/80 leading-relaxed text-sm">
               Crafting unforgettable celebrations in Uttarakhand. We bring your dreams to life with precision and care.
             </p>
-     <div className="flex space-x-4">
-  <a
-    href="https://facebook.com/syncity"
-    className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
-  >
-    <Image src="/icons/facebook.png" alt="Facebook" width={24} height={24} className="w-6 h-6" />
-  </a>
-  <a
-    href="https://www.instagram.com/syncityevents?igsh=ZjZjN3B2cmtlcnFq"
-    className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
-  >
-    <Image src="/icons/instagram.png" alt="Instagram" width={24} height={24} className="w-6 h-6" />
-  </a>
-  <a
-    href="https://twitter.com/syncity"
-    className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
-  >
-    <Image src="/icons/twitter.png" alt="Twitter" width={24} height={24} className="w-6 h-6" />
-  </a>
-  <a
-    href="https://linkedin.com/company/syncity"
-    className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
-  >
-    <Image src="/icons/linkedin.png" alt="LinkedIn" width={24} height={24} className="w-6 h-6" />
-  </a>
-</div>
+            <div className="flex space-x-4">
+              <a
+                href="/"
+                className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
+              >
+                <Image src="/icons/facebook.png" alt="Facebook" width={24} height={24} className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/syncityevents?igsh=ZjZjN3B2cmtlcnFq"
+                className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
+              >
+                <Image src="/icons/instagram.png" alt="Instagram" width={24} height={24} className="w-6 h-6" />
+              </a>
+              <a
+                href="/"
+                className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
+              >
+                <Image src="/icons/twitter.png" alt="Twitter" width={24} height={24} className="w-6 h-6" />
+              </a>
+              <a
+                href="/"
+                className="w-10 h-10 bg-[#897980]/10 rounded-full flex items-center justify-center hover:bg-[#897980]/20 transition-colors"
+              >
+                <Image src="/icons/linkedin.png" alt="LinkedIn" width={24} height={24} className="w-6 h-6" />
+              </a>
+            </div>
           </div>
 
           <div className="space-y-6">
@@ -95,7 +95,7 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/gallery" className="text-[#897980]/80 hover:text-[#897980] transition-colors">
                   Gallery
                 </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
                 <Link href="/blog" className="text-[#897980]/80 hover:text-[#897980] transition-colors">
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -126,14 +126,15 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <span className="text-[#D8B7C1]">📞</span>
                 <div>
-                  <p className="font-medium">+91 98765 43210</p>
+                  <p className="font-medium">+91 63977 23250</p>
+                  <p className="font-medium">+91 84330 23265</p>
                   <p className="text-[#897980]/80 text-xs">Available 24/7</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-[#D8B7C1]">✉️</span>
                 <div>
-                  <p className="font-medium">hello@syncity.in</p>
+                  <p className="font-medium">connect@syncityevents.com</p>
                   <p className="text-[#897980]/80 text-xs">Quick response guaranteed</p>
                 </div>
               </div>

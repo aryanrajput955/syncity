@@ -35,7 +35,7 @@ export default function OurVisionSection() {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/happy-couple-celebrating-successful-wedding-in-mou.png"
+                src="/img/1.png"
                 alt="Event planning"
                 width={600}
                 height={800}

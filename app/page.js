@@ -6,6 +6,7 @@ import CTASection from './components/cta';
 import WhyWeStartedSection from './components/whywestarted';
 import OneStationGallerySection from './components/onestation';
 import CustomLoader from './components/customloader';
+import VideoSection from './components/video';
 
 const Page = () => {
   const [isPageLoading, setIsPageLoading] = useState(true);
@@ -28,6 +29,7 @@ const Page = () => {
     <>
       <HeroSection />
       <WhyWeStartedSection />
+      <VideoSection />
       <OurVisionSection />
       {/* <OneStationGallerySection /> */}
       <CTASection />

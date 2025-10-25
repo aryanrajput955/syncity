@@ -90,7 +90,7 @@ export default function HeroSection() {
               </motion.button>
             </Link>
             
-            <Link href="/gallery">
+            {/* <Link href="/gallery">
               <motion.button
                 className="group text-white font-medium px-10 py-4 text-lg relative overflow-hidden transition-all duration-300 border-b border-white/30 hover:border-[#D8B7C1] min-w-[220px]"
                 whileHover={{ scale: 1.02 }}
@@ -100,7 +100,7 @@ export default function HeroSection() {
                   View Our Portfolio
                 </span>
               </motion.button>
-            </Link>
+            </Link> */}
           </motion.div>
 
           {/* Stats Section */}
