@@ -14,7 +14,10 @@ export default function CTASection() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-[#EFE1DA] relative overflow-hidden text-center">
+    <section
+      ref={ref}
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#EFE1DA] relative overflow-hidden text-center"
+    >
       {/* Parallax Background */}
       <motion.div
         style={{ y: backgroundY }}
@@ -29,13 +32,13 @@ export default function CTASection() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFE1DA]/20 to-[#D8B7C1]/80"></div>
       </motion.div>
 
-      <div className="max-w-4xl mx-auto relative z-10 bg-white/50 backdrop-blur-md rounded-lg py-12 px-6">
+      <div className="max-w-4xl mx-auto relative z-10 bg-white/50 backdrop-blur-md rounded-lg py-8 sm:py-10 md:py-12 px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-serif font-bold text-[#897A81] mb-6 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#897A81] mb-4 sm:mb-6 leading-tight"
         >
           Create Your <span className="text-[#D8B7C1]">Unforgettable Moment</span>
         </motion.h2>
@@ -44,7 +47,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-lg text-[#897A81]/90 mb-8 max-w-2xl mx-auto"
+          className="text-base sm:text-lg text-[#897A81]/90 mb-6 sm:mb-8 max-w-2xl mx-auto"
         >
           Let Syncity transform your vision into a seamless, elegant event. Start planning your dream celebration with us today.
         </motion.p>
@@ -53,21 +56,20 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
         >
           <Link href="/contact">
             <motion.button
-              className="bg-[#897A81] text-white px-8 py-4 text-lg font-medium uppercase tracking-wider  shadow-md hover:shadow-lg transition-all duration-500 hover:bg-[#D8B7C1]"
+              className="bg-[#897A81] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-500 hover:bg-[#D8B7C1] w-full sm:w-auto"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               Get Started
             </motion.button>
           </Link>
-          
           <Link href="/services">
             <motion.button
-              className="bg-[#897A81] text-white px-12 py-4 text-lg font-light uppercase tracking-wider hover:bg-[#D8B7C1] transition-colors duration-500 "
+              className="bg-[#897A81] text-white px-6 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-light uppercase tracking-wider hover:bg-[#D8B7C1] transition-colors duration-500 w-full sm:w-auto"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
