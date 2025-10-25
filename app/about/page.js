@@ -334,7 +334,7 @@ export default function About() {
 
             <motion.div 
               variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-6 md:gap-8"
+              className="grid md:grid-cols-2 gap-6 md:gap-8"
             >
               {[
                 {
@@ -349,12 +349,7 @@ export default function About() {
                   role: "Co-Founder & Operations Director",
                   description: "Operations mastermind who ensures seamless execution through strategic planning and unparalleled logistical expertise."
                 },
-                {
-                  image: "/professional-indian-woman-event-planner-smiling.png",
-                  name: "Meera Patel",
-                  role: "Creative Director",
-                  description: "Artistic visionary who weaves beauty and emotion into every celebration, creating truly unforgettable experiences."
-                }
+              
               ].map((member, index) => (
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="bg-white/90 backdrop-blur-sm border-2 border-[#D8B7C1]/30 h-full group cursor-pointer hover:border-[#D8B7C1] transition-all duration-500 overflow-hidden">
