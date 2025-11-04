@@ -103,7 +103,7 @@ export default function Services() {
     },
     {
       id: 'birthday-parties',
-      title: 'Special Ocasions',
+      title: 'Special Occasions',
       icon: '🎉',
       description: 'Joyful celebrations tailored for all ages',
       features: ['Themed Decorations', 'Entertainment & Games', 'Catering Services', 'Return Gift Services']
