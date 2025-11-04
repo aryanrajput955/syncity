@@ -341,7 +341,7 @@ export default function About() {
                   image: "/img/img.jpg",
                   name: "Manik",
                   role: "Founder & Lead Planner",
-                  description: "Visionary leader who transforms wedding dreams into flawless realities through meticulous planning and creative excellence."
+                  description: "Visionary leader who transforms individual's dreams into flawless realities through meticulous planning and creative excellence."
                 },
                 {
                   image: "/img/lakshay.jpg",

@@ -5,7 +5,7 @@ import { Video } from "lucide-react";
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 
-// Animation variants
+// Simplified animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -22,27 +22,22 @@ const staggerContainer = {
   }
 };
 
-const videoVariants = (index) => ({
-  initial: { 
-    opacity: index === 1 || index === 2 ? 1 : 0.7, 
-    x: index === 0 ? -8 : index === 3 ? 8 : 0 
-  },
-  animate: { 
-    opacity: index === 1 || index === 2 ? 1 : 0.7, 
-    x: index === 0 ? -8 : index === 3 ? 8 : 0 
-  },
-  transition: { duration: 0.5, ease: "easeOut" }
-});
+// Uniform video animation (no depth tricks)
+const videoVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.6 }
+};
 
 // Video data
 const videos = [
   {
-    src: "/img/1.mp4",
+    src: "/img/2.mp4",
     poster: "/wedding-moment-1-poster.png",
     alt: "Wedding Ceremony Highlight"
   },
   {
-    src: "/img/2.mp4",
+    src: "/img/6.mp4",
     poster: "/wedding-moment-2-poster.png",
     alt: "Reception Dance Moment"
   },
@@ -58,7 +53,7 @@ const videos = [
   }
 ];
 
-// Slick slider settings for mobile
+// Slick slider settings (mobile)
 const sliderSettings = {
   dots: true,
   infinite: true,
@@ -76,11 +71,9 @@ const sliderSettings = {
 export default function PortraitVideoSection() {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size for mobile vs. desktop layout
+  // Responsive detection
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Mobile breakpoint at 768px
-    };
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -96,7 +89,7 @@ export default function PortraitVideoSection() {
           variants={staggerContainer}
           className="text-center space-y-4 md:space-y-5"
         >
-          {/* Section Header */}
+          {/* Header */}
           <motion.div variants={fadeInUp} className="space-y-2">
             <div className="inline-flex items-center gap-1.5 bg-[#D8B7C1]/10 px-2 py-1 border border-[#D8B7C1]/20">
               <Video className="h-3 w-3 md:h-3.5 md:w-3.5 text-[#D8B7C1]" />
@@ -113,10 +106,10 @@ export default function PortraitVideoSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="h-0.5 bg-[#D8B7C1] mx-auto"
-            ></motion.div>
+            />
           </motion.div>
 
-          {/* Video Description */}
+          {/* Description */}
           <motion.p
             variants={fadeInUp}
             className="text-sm md:text-base text-[#897A81]/70 max-w-md mx-auto font-light leading-relaxed"
@@ -124,21 +117,15 @@ export default function PortraitVideoSection() {
             Heartfelt moments from Syncity's events in Uttarakhand.
           </motion.p>
 
-          {/* Video Display */}
+          {/* Video Grid / Slider */}
           {isMobile ? (
-            <motion.div
-              variants={staggerContainer}
-              className="mt-4 md:mt-5"
-            >
+            <motion.div variants={staggerContainer} className="mt-4 md:mt-5">
               <Slider {...sliderSettings}>
-                {videos.map((video, index) => (
-                  <div key={index} className="px-2">
-                    <motion.div
-                      variants={fadeInUp}
-                      className="relative"
-                    >
+                {videos.map((video, i) => (
+                  <div key={i} className="px-2">
+                    <motion.div variants={videoVariants}>
                       <video
-                        className="w-full aspect-[9/16] max-w-[240px] mx-auto"
+                        className="w-full aspect-[9/16] max-w-[240px] mx-auto  shadow-md"
                         poster={video.poster}
                         autoPlay
                         muted
@@ -158,18 +145,16 @@ export default function PortraitVideoSection() {
           ) : (
             <motion.div
               variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3 mt-4 md:mt-5 relative"
+              className="grid grid-cols-4 gap-3 mt-4 md:mt-5"
             >
-              {videos.map((video, index) => (
+              {videos.map((video, i) => (
                 <motion.div
-                  key={index}
-                  variants={videoVariants(index)}
-                  className={`relative ${
-                    index === 1 || index === 2 ? "z-10" : "z-0 hover:blur-0"
-                  }`}
+                  key={i}
+                  variants={videoVariants}
+                  className="relative"
                 >
                   <video
-                    className="w-full aspect-[9/16] max-w-[180px] md:max-w-[240px] mx-auto"
+                    className="w-full aspect-[9/16] max-w-[240px] mx-auto  shadow-md"
                     poster={video.poster}
                     autoPlay
                     muted
@@ -188,7 +173,7 @@ export default function PortraitVideoSection() {
         </motion.div>
       </div>
 
-      {/* Custom CSS for Slick Dots */}
+      {/* Slick Dots Styling */}
       <style jsx>{`
         .custom-dots {
           position: relative;
